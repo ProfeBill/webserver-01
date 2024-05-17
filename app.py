@@ -11,7 +11,7 @@ app = Flask(__name__)
 # decorator: se usa para indicar el URL Path por el que se va a invocar nuestra función
 @app.route('/')      
 def hello():
-    return 'Hola Mundo Web!'
+    return 'Hola <i>Mundo</i> Web!'
   
 # para retornar plantillas HTML almacenadas en la carpeta templates, se usa a render_template  
 @app.route('/hola')      

@@ -5,7 +5,12 @@
 Descripción del protocolo HTTP:
 
 En Inglés: https://developer.mozilla.org/en-US/docs/Web/HTTP
+
 En Español: https://developer.mozilla.org/es/docs/Web/HTTP
+
+Pastel de HTML: 
+
+En Inglés: https://developer.mozilla.org/en-US/docs/Learn/HTML/Cheatsheet
 
 * Protocolo HTTP
 
@@ -42,6 +47,8 @@ El primer paso es instalar el framework Flask mediante el siguiente comando:
 
 Su aplicación debe contener un módulo principal que se llame app.py (puede tener otro nombre, pero requerirá hacer cambios en la forma en que ejcuta la aplicación)
 
+## Escribiendo el servidor
+
 Para convertir el módulo en un módulo web, importe el módulo Flask
 
 ```
@@ -69,3 +76,14 @@ al final del módulo la inicialización de la aplicación Flask
 if __name__=='__main__':
    app.run()
 ```
+
+## Ejecución
+
+Puede ejecutar la aplicación directamente, pero tendría que reiniciar cada vez que haga cambios.
+
+Si ejecuta flask directamente en modod debug, el detectará cada vez que haga cambios en el código
+y recargará automáticamente.
+
+Para ejecutar Flask en moddo Debug:
+
+python3 -m flask run --debug
