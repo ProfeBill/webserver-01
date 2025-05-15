@@ -13,19 +13,17 @@ app = Flask(__name__)
 def hello():
     return 'Hola <i>Clase de Codigo Limpio</i> Cruel!'
   
-# para retornar plantillas HTML almacenadas en la carpeta templates, se usa a render_template  
-@app.route('/hola')      
-def html():
-    return render_template('hola.html')
+@app.route('/hola')  
+def hello_html():
+    return render_template( 'hola.html', nombre=request.args["nombre"] )
 
-@app.route('/compra')      
-def compra():
-    return render_template('compra.html')
+@app.route('/buscar')
+def buscar():
+    return render_template('buscar.html')
 
-@app.route('/calcular_cuota')
-def calcular_cuota():
-    compra = request.args["compra"]
-    return "La compra fue de : " + compra
+@app.route('/lista_tarjetas')
+def lista_tarjetas():
+    return render_template('lista_tarjetas.html', cedula=request.args["cedula"]  )
 
 # Esta linea permite que nuestra aplicación se ejecute individualmente
 if __name__=='__main__':
